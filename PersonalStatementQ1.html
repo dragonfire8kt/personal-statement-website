@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="PersonalStatement.css">
+    <title>Kaitlin Addis | Personal Statement</title>
+</head>
+
+<header> 
+    <!--The links that should be shown in the navigation bar-->
+    <!--Having current page in a span helps differentiate it from the rest of the links to class it more clearly and improve ease of styling-->
+    <div class = 'navBar'>
+            <a href= "PersonalStatementHome.html">Home</a>
+            <span class="currentPage"><a href= "PersonalStatementQ1.html">Question 1</a></span>
+            <a href= "PersonalStatementQ2.html">Question 2</a>
+            <a href= "PersonalStatementQ3.html">Question 3</a>
+            <a href= "PersonalStatementGallery.html">Photo Gallery</a>
+            <a href= "PersonalStatementWebsiteProcess.html">Website Creation Process</a>
+    </div>
+</header>
+
+<body>
+    <div class="content">
+        <!-- UPDATE CONTENTS WHEN PERSONAL STATEMENT COMPLETED-->
+        <h1>Why do you want to study this course or subject?</h1>
+        <p>I was introduced to Computing at age 11 in school and immediately found interest in programming. This appeal to me was so strong that I began to teach myself aspects of Python – the language taught – into the GCSE curriculum, despite being two years away from this level. The Head of Computing at my school sent a physical letter to my parents to commend my enthusiasm, and I am still proud to have received this acknowledgement. Since then, I have come to understand that Computer Science is much more than writing code, and these realisations have only deepened my curiosity for this discipline.</p>
+        <p>I now see that I adore this subject because I enjoy the challenge of logical and mathematical problems and am thoroughly enthused with considering unique yet effective solutions. I love that Computer Science allows me to combine the creative and scientific skills I find enthralling, and I think that this interest makes me a suitable student for the subject.</p>
+        <p>In lessons, I find myself constantly wanting to dig deeper into the content and understand the “why” that isn’t mentioned at this level. Studying Computing beyond A-level in a research-powered environment will allow me to satisfy the complex depth of understanding I desire and prepare me for a job in this competitive field.</p>
+    </div>
+
+    <!--Contains the text for the background carousel-->
+    <div class="movingContent">
+        <div class="homeContentBG">
+            <span>Personal Statement | Kaitlin Addis | Computer Science | </span>
+            <!--Ensures that there is no gap when the first line of the carousel text ends-->
+            <!--aria-hidden="True" prevents accessibility readers from reading the carousel text twice-->
+            <span aria-hidden="True">Personal Statement | Kaitlin Addis | Computer Science | </span>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <!--Creates input box, submit button, prompt etc in the footer of the page to give feedback on the website-->
+    <!--Including in a form tag means that the user pressing enter will have the same effect as clicking the button-->
+    <form>
+        Like the website? Leave a review!
+        <input type="text" name="review" placeholder="Leave Your Review Here" style="margin: 10px;">
+        <button onclick="sendReview()" style="margin: 10px;">Send</button>
+    </form>
+    <!--Adds my name to remind people that this is who they are sending feedback to and who created the website-->
+    <h4>Kaitlin Addis</h4>
+</footer>
+
+<script type="text/javascript" src="PersonalStatement.js"></script>
