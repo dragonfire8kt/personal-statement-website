@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="PersonalStatement.css">
+    <title>Kaitlin Addis | Personal Statement</title>
+</head>
+
+<header> 
+    <!--The links that should be shown in the navigation bar-->
+    <!--Having current page in a span helps differentiate it from the rest of the links to class it more clearly and improve ease of styling-->
+    <div class = 'navBar'>
+            <a href= "PersonalStatementHome.html">Home</a>
+            <a href= "PersonalStatementQ1.html">Question 1</a>
+            <a href= "PersonalStatementQ2.html">Question 2</a>
+            <span class="currentPage"><a href= "PersonalStatementQ3.html">Question 3</a></span>
+            <a href= "PersonalStatementGallery.html">Photo Gallery</a>
+            <a href= "PersonalStatementWebsiteProcess.html">Website Creation Process</a>
+    </div>
+</header>
+
+<body>
+    <div class="content">
+        <!-- UPDATE CONTENTS WHEN PERSONAL STATEMENT COMPLETED-->
+        <h1>What else have you done to prepare outside of education, and why are these experiences useful?</h1>
+        <p>Over summer I joined the NCSC CyberFirst Advanced Course at UWE Bristol – an experience run by the Government’s now-called TechFirst scheme. This week let me investigate cybersecurity, through hearing from knowledgeable speakers and engaging with applied activities, alongside improving my networking ability and self-assurance by interacting with likeminded students and professors. It also confirmed my interest in studying at university through experiencing a glimpse of higher education.</p>
+        <p>To evolve my practical workplace experience, I worked within the Digital Services department at a local university for a week. During this time, I developed my ability to work with others in a computing-based setting, moving between departments in this company division. On the Service Desk I gained valuable customer service experience, helping solve problems for staff and students. I also engaged in administrative tasks, testing my ability to interact with new interfaces and technologies I had not encountered before. Working with another department, I was able to learn about the software and hardware systems that allow for the automated control of devices on campus. This built on topics taught in school lessons, giving me useful practical experience applying this content. Interacting with Information Services staff improved my comprehension of web development. It was also useful seeing how AI can assist with writing code without doing all the work, and this aided my endeavour to keep updated on developing and emerging computing technologies (as these are so rapidly changing). I was advised on new places to find super curricular activities which can further expand my knowledge and experience beyond the resources I have so far found myself.</p>
+        <p>I previously gained experience working as a Graphic Design Assistant at Dorset Software for a week. Within this placement I updated laptops to Windows 11, set up interview rooms, tested newly developed training courses, and developed graphic components. From this I enhanced my knowledge of activities within a computing-centred workplace, interacted with new and senior employees, and followed detailed procedures independently, whilst evolving my creative responses.</p>
+        <p>To further improve my practical understanding of Computer Science, this year I accepted my Rotary Technology Tournament invitation; this is the second year I have participated. I worked as part of a team to solve a STEM task within strict specifications. My team worked fluidly by dividing the challenge between us based on individual specialisms and collaborating for larger conversations which involved multiple disciplines. This competition helped me to develop the teamwork, independence, communication and practical skills required to succeed in a Computer Science degree and career.</p>
+        <p>At present many find it hard to keep up with the fast pace at which computing is evolving, which is partially why the Rotary Technology Tournament is run. This is something I have avoided by learning alongside these developments through attending online lectures, accompanied by some additional reading. Exposing myself to content on topics like AI through attending lectures such as “Work, Out of Reach” by Daniel Susskind or reading literature like “AI Demystified” by Antonio Weiss has helped me keep up with emerging technologies and their impact. Through this I hope to be better prepared for university and future workplaces, where new technologies are likely to be centre focus.</p>
+        <p>Due to Computer Science’s high dependence on Maths, I have spent time testing my mathematical ability - by working through high level problems - and exploring how maths can be applied to unconventional topics like art. These tasks fuelled my curiosity in this subject outside the school curriculum and allowed me to apply mathematical theory to practical endeavours. Some of the challenges I have faced were guided by well-known organisations like MEI, who exposed me to thought-provoking questions I would otherwise have been unable to source.</p>
+        <p>When attending one university open day, I was able to experience a taster lecture on “What is information?”. This touched on how information can be quantified, the mathematical reasoning behind this, and how it can be applied to computing. I left the lecture wanting to spend more time understanding this concept and working through it myself, so I watched a video from YouTube channel 3Blue1Brown on “Reinventing Entropy | Compression is Intelligence Part 1”. This video allowed me to work through the idea at my own pace, and it solidified the knowledge I had gathered during the taster lecture. I found it interesting to think how information, something everyone knows but may struggle to define, has a mathematical context, and how this can be applied to key computer science concepts like data compression and AI, whilst having been experimented with long before these applications became common. This task demonstrates my dedication to computer science and my desire to learn how things work beyond the A-Level specification, as well as my curiosity to understand mathematical problems and logical challenges.</p>
+        <p>To uncover a wider breadth of Computing pathways, I attended Education In Action’s London Computer Science Conference. I heard talks from professionals working in a plethora of technological careers, indicating the variety of jobs available after studying this subject. Being part of this event allowed me to gain insight into studying and working in this area and the skills I already have and will need to develop to succeed in these goals.</p>
+        <p>These skills include the ability to work well with both software and hardware. Both these elements of the subject require patience and an eye for detail– precision is vital for hardware connections to function, whilst debugging a program stems from accuracy and adaptability. I have demonstrated my investment into these skills through several activities, such as was when I disassembled two computers, selecting the best parts to reassemble into one. I applied the knowledge of hardware gathered in lessons to a practical activity, and it reinforced and extended my knowledge of much curriculum content. Another task was teaching myself elements of C, which I used to control an Arduino and a connected light strip. I gained insight into how the skills you gather from learning one language can be transferred to others. These tasks required me to follow technical rules accurately and helped me build important technical skills.</p>
+    </div>
+
+    <!--Contains the text for the background carousel-->
+    <div class="movingContent">
+        <div class="homeContentBG">
+            <span>Personal Statement | Kaitlin Addis | Computer Science | </span>
+            <!--Ensures that there is no gap when the first line of the carousel text ends-->
+            <!--aria-hidden="True" prevents accessibility readers from reading the carousel text twice-->
+            <span aria-hidden="True">Personal Statement | Kaitlin Addis | Computer Science | </span>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <!--Creates input box, submit button, prompt etc in the footer of the page to give feedback on the website-->
+    <!--Including in a form tag means that the user pressing enter will have the same effect as clicking the button-->
+    <form>
+        Like the website? Leave a review!
+        <input type="text" name="review" placeholder="Leave Your Review Here" style="margin: 10px;">
+        <button onclick="sendReview()" style="margin: 10px;">Send</button>
+    </form>
+    <!--Adds my name to remind people that this is who they are sending feedback to and who created the website-->
+    <h4>Kaitlin Addis</h4>
+</footer>
+
+<script type="text/javascript" src="PersonalStatement.js"></script>
