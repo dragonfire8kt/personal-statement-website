@@ -47,10 +47,23 @@ h2 {
     justify-content: center;
 }
 
-h4 {
+/*Allows me to format my GitHub link differently to other links*/
+.signOff {
     font-family: cursive;
     text-underline-offset: 0.25em;
     text-decoration: #D9C0F6 wavy underline;
+}
+
+/*Allows me to format my GitHub link differently to other links when hovered over*/
+.signOff:hover {
+    animation: wave 2s ease-in-out infinite;
+    color: #FFFFFF;
+}
+
+/*Defining how to animate the GitHub link hover*/
+@keyframes wave {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-5px);}
 }
 
 /*Styling main text size*/
