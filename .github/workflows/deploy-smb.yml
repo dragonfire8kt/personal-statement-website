@@ -20,13 +20,23 @@ jobs:
         run: |
           $source = "${{ github.workspace }}\"
           $destination = "\\Domino\Home\www"
+          $checkFile = Join-Path $destination "index.html"
 
           if (-not (Test-Path $destination)) {
             New-Item -ItemType Directory -Force -Path $destination | Out-Null
           }
 
           robocopy $source $destination /MIR /XD .git .github /XF .gitignore
+          $robocopyExitCode = $LASTEXITCODE
 
-          if ($LASTEXITCODE -ge 8) {
-            throw "robocopy reported errors; exit code $LASTEXITCODE"
+          if ($robocopyExitCode -ge 8) {
+            throw "robocopy reported errors; exit code $robocopyExitCode"
           }
+
+          if (-not (Test-Path $checkFile)) {
+            throw "Deployment validation failed: $checkFile was not found in the production share."
+          }
+
+          Write-Host "robocopy completed successfully with exit code $robocopyExitCode"
+          Write-Host "Deployment validation passed: $checkFile exists."
+          exit 0
