@@ -8,7 +8,7 @@ function sendReview() {
 function enter() {
     if (document.getElementById("sitePassword").value == 2357) {
         alert("Correct");
-        window.open("PersonalStatementHome.html", "_self");
+        window.open("index.html", "_self");
     }
 
     else {
