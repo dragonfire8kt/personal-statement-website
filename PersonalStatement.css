@@ -27,11 +27,35 @@ a {
     display: block;
     padding: 15px;
     text-decoration: none;
+    position: relative;
 }
 
 /*The links now darken when hovered over*/
 a:hover {
     color: #D9C0F6;
+}
+
+/*Takes the tooltiptext (data-tooltip="") from each link in the navigation bar and creates a tooltip for each*/
+/*This means that when the user hovers over each link, it will show the full title of that page for if I have created a shorter title for the navigation bar*/
+a::before {
+    opacity: 0;
+}
+
+/*Makes the tooltip visible when hovering over the link*/
+/*Need to finish designing the tooltip to be aesthetically pleasing, and need to try to move it to be next to the mouse pointer using JS*/
+a:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: #D9C0F6;
+    color: #000;
+    opacity: 100;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    padding: 0.2em;
+    white-space: nowrap;
+    filter: drop-shadow(#6119B8 4px 4px 2px);
 }
 
 /*Styling titles*/
@@ -157,7 +181,7 @@ input {
     justify-content: center;
     align-items: center;
     padding: 5px;
-    border-radius: 7%;
+    border-radius: 7px;
 }
 
 /*Centralises the password-entry box*/
@@ -184,7 +208,7 @@ input {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    border-radius: 7%;
+    border-radius: 7px;
     margin: 10px;
     filter: drop-shadow(#D9C0F6 2px 5px 3px);
 }

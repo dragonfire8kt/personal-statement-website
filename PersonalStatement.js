@@ -6,12 +6,15 @@ function sendReview() {
 
 //ALSO MAKE SURE DO NOT HARD CODE PASSWORD! (add in database link?)
 function enter() {
-    if (document.getElementById("sitePassword").value == 2357) {
+    const enteredPassword = Number(document.getElementById("sitePassword").value);
+
+    if (enteredPassword === 2357) {
         alert("Correct");
-        window.open("index.html", "_self");
+        window.location.href = "index.html";
+        //if the password is correct, the return line means that the function is immediately exited, preventing further lines of code from running unless the password is incorrect
+        //This has the same purpose as a following else statement but is clearner
+        return;
     }
 
-    else {
-        alert("Incorrect Password");
-    }
+    alert("Incorrect Password");
 }
