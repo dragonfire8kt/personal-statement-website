@@ -87,7 +87,7 @@ h2 {
 /*Defining how to animate the GitHub link hover*/
 @keyframes wave {
     0%, 100% {transform: translateY(0);}
-    50% {transform: translateY(-5px);}
+    50% {transform: translateY(-4px);}
 }
 
 /*Styling main text size*/
