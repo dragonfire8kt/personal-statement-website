@@ -1,11 +1,3 @@
-//When the user sends a review it *****
-//Edit so actually sends review and then update comments accordingly
-function sendReview() {
-     alert("Your Feedback Has Been Sent");
-}
-
-
-
 //CODE BELOW CONTROLS PASSWORD PROTECTION OF THE WEBSITE
 
 //Creates two constants: one for the key that will be used to store whether the user has logged in or not, and one for the key that will be used to store the page they were on before being redirected to the password page.

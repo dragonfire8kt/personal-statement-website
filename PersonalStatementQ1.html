@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="PersonalStatement.css">
     <title>Kaitlin Addis | Personal Statement</title>
+    <script type="text/javascript" src="PersonalStatement.js" defer></script>
 </head>
 
 <header> 
@@ -42,13 +43,13 @@
 <footer>
     <!--Creates input box, submit button, prompt etc in the footer of the page to give feedback on the website-->
     <!--Including in a form tag means that the user pressing enter will have the same effect as clicking the button-->
-    <form>
-        Like the website? Leave a review!
-        <input type="text" name="review" placeholder="Leave Your Review Here" style="margin: 10px;">
-        <button onclick="sendReview()" style="margin: 10px;">Send</button>
+    <!--I use Formspree to handle the form submission because AI suggested that, for the simplicity of my project, using an external service like this one would be the most suitable way to handle the submission. After researching the service, I found it to suit my needs, and also notably found its security to be appropriate, so I am now using this to handle inputs here.-->
+    <form action="https://formspree.io/f/xgaelwnl" method="POST">
+        <!--required means that the user must have inputted something before form can be submitted-->
+        <label for="review">Like the website? Leave a review!</label>
+        <input id="review" type="text" name="review" required>
+        <button type="submit">Send</button>
     </form>
     <!--Adds my name to remind people that this is who they are sending feedback to and who created the website as well as providing opportunity for the GitHub link-->
     <a href="https://github.com/dragonfire8kt/personal-statement-website" class="signOff">Kaitlin Addis</a>
 </footer>
-
-<script type="text/javascript" src="PersonalStatement.js"></script>

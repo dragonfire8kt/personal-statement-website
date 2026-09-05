@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="PersonalStatement.css">
     <title>Kaitlin Addis | Personal Statement</title>
+    <script type="text/javascript" src="PersonalStatement.js" defer></script>
+    <script src="GalleryPics.js" defer></script>
 </head>
 
 <header> 
@@ -46,43 +48,13 @@
 <footer>
     <!--Creates input box, submit button, prompt etc in the footer of the page to give feedback on the website-->
     <!--Including in a form tag means that the user pressing enter will have the same effect as clicking the button-->
-    <form>
-        Like the website? Leave a review!
-        <input type="text" name="review" placeholder="Leave Your Review Here" style="margin: 10px;">
-        <button onclick="sendReview()" style="margin: 10px;">Send</button>
+    <!--I use Formspree to handle the form submission because AI suggested that, for the simplicity of my project, using an external service like this one would be the most suitable way to handle the submission. After researching the service, I found it to suit my needs, and also notably found its security to be appropriate, so I am now using this to handle inputs here.-->
+    <form action="https://formspree.io/f/xgaelwnl" method="POST">
+        <!--required means that the user must have inputted something before form can be submitted-->
+        <label for="review">Like the website? Leave a review!</label>
+        <input id="review" type="text" name="review" required>
+        <button type="submit">Send</button>
     </form>
     <!--Adds my name to remind people that this is who they are sending feedback to and who created the website as well as providing opportunity for the GitHub link-->
     <a href="https://github.com/dragonfire8kt/personal-statement-website" class="signOff">Kaitlin Addis</a>
 </footer>
-
-<script type="text/javascript" src="PersonalStatement.js"></script>
-<!--As well as using the basic JavaScript code for this website, this page also has its own separate external JavaScript document-->
-<!--This is because allowing the user to click on any image and have it enlarged in a way that it fits on the screen uses quite a bit of JS code, which is not necessary for the other pages so would be less efficient if included in the generic JS code for the website-->
-<script src="GalleryPics.js"></script>
-<!--On top of this external JS code for this page, there is also some directly in the HTML code (see below)-->
-<!--I have included this JS code directly in the HTML code because the code below pulls in the image files to presented to the user from their external source and displays them on the page-->
-<!--Having the code to do this here is marginally faster than having it external, which would improve efficiency and smoothness of loading the page (although mostly in larger websites) and therefore is useful to include to improve maintainability and scalability-->
-<script>
-
-    //Extract the images from the GalleryPics JS document and identify them as being of the image class
-    GalleryPics.forEach(src => {
-         document.querySelector(".gallery").innerHTML += `<img class="image" src="${src}">`;
-    });
-
-    //For every image, if it is clicked then the (otherwise hidden) modal is shown
-    //This centralises and enlarges the image by setting it to the id "modalImage" so it is displayed inside the modal
-    document.querySelectorAll(".image").forEach(img => {
-        img.addEventListener("click", () => {
-            document.getElementById("imageModal").style.display = "flex";
-            document.getElementById("modalImage").src = img.src;
-        });
-    })
-
-    //If the user clicks anywhere in the modal (which covers the entire screen) excluding directly on the image held there, the modal will be hidden (so the enlarged image no longer shows)
-    document.getElementById("imageModal").onclick = function(e) {
-        if (e.target === this) {
-            this.style.display = "none";
-        }
-    };
-
-</script>
