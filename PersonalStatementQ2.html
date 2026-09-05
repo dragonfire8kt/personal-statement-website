@@ -7,29 +7,34 @@
     <script type="text/javascript" src="PersonalStatement.js" defer></script>
 </head>
 
-<header> 
-    <!--The links that should be shown in the navigation bar-->
-    <!--Having current page in a span helps differentiate it from the rest of the links to class it more clearly and improve ease of styling-->
-    <div class = 'navBar'>
-            <a href= "index.html" data-tooltip="Home Page">Home</a>
-            <a href= "PersonalStatementQ1.html" data-tooltip="Why do you want to study this course or subject?">Question 1</a>
-           <span class="currentPage"><a href= "PersonalStatementQ2.html" data-tooltip="How have your qualifications and studies helped you to prepare for this course or subject?">Question 2</a></span>
-            <a href= "PersonalStatementQ3.html" data-tooltip="What else have you done to prepare outside of education, and why are these experiences useful?">Question 3</a>
-            <a href= "PersonalStatementGallery.html" data-tooltip="Photo Gallery">Photo Gallery</a>
-            <a href= "PersonalStatementWebsiteProcess.html" data-tooltip="Why make a personal statement website?">Website Creation Process</a>
-    </div>
-</header>
-
 <body>
-    <div class="content">
-        <!-- UPDATE CONTENTS WHEN PERSONAL STATEMENT COMPLETED-->
-        <h1>How have your qualifications and studies helped you to prepare for this course or subject?</h1>
-        <p>Studying Graphic Communications has allowed me to build creativity, both in visual design and in developing unique solutions to problems. It has given me the opportunity to communicate ideas, think outside of the box, and demonstrate adaptability.
-        <p>These opportunities have also been explored through Mathematics, which tests my logical and abstract thinking and resilience. Through this subject I find satisfaction in independently working through challenging questions and finding links between topics within this subject and in others. Maths was a fundamental asset when studying the equation behind the PageRank Algorithm, for example, as it gave me the skills required to understand long equations which might otherwise appear overwhelming at first.</p>
-        <p>Computer Science A Level has given me insight into the logical theory, software and hardware elements of this subject. Through taught content and coursework, I have been able to gather a useful foundation of knowledge that will ease transition into higher education. The coursework has let me begin to develop high-quality software to solve a problem, making use of industry procedures and expanding my subject skills. For my project I chose to create an airport runway simulation; this allows users to monitor fictional airport throughput over time, and will be written in Python. Despite not having yet finished the project, I already feel more confident in my ability to follow a software development life cycle, evaluate the requirements of a computer-based task using stakeholder input, and apply that human interaction to the technical component of work. This has tested and will continue to test my time management and independent study abilities, among other crucial skills which have developed as a result. My dedication to all aspects of this subject has been marked by receiving my school’s senior award for Computer Science. However, despite this course providing me with necessary knowledge, the subject matter taught at this level is insufficient to appease my interest. I have already begun to remedy this through super curricular exploration which has widened the scope of my comprehension of Computer Science.</p>
-        <p>In my desire to build upon the core A Level curriculum, I chose the topic of gamification, a concept often covered in Human-Computer Interaction studies, for an EPQ. Over time, the title of my dissertation evolved to “Does the gamification of online educational tools improve the learning outcomes of GCSE students when used for content revision?”. My research led me to an increased interest in gamification – secondary information in the form of academic journals, e-books and videos explained how psychology engages with Computing, an aspect to the topic I had never considered, whilst my primary study was highly enjoyable, providing me with a new freedom to research in my own desired depth. Planning my investigation was time-consuming yet rewarding - it ran smoothly with year 10 Computing students as participants and the results I gathered led to the conclusion that my hypothesis was misinformed. I answered my question with clarity – the full answer explains the simple conclusion of “not necessarily”. This course prompted me to use new, unfamiliar technologies; I became better acquainted using software to handle the results of my study and keep to deadlines, and with using AI to organise data, among other activities. I had no previous experience with detailed research projects and believe this course has prepared me for the step up to higher education through developing key skills and those otherwise unexplored until university, like referencing, source evaluation, presentation, leadership and extensive independent learning.</p>
-        <p>Above my academic studies, I have dedicated time within school to helping others in my chosen subject of interest. As a CyberFirst Student Ambassador and school Computer Science Prefect I engage in activities which develop my leadership skills and confidence whilst improving proficiency in this subject. Having run mentoring sessions, planned an assembly, and represented the subject almost constantly to current and prospective students and parents, I have been able to outwardly reflect my passion in a way that benefits others.</p>
-    </div>
+
+    <!--Since the header is to be seen on the page, it must go inside the body tags-->
+    <header> 
+        <!--The links that should be shown in the navigation bar-->
+        <!--Having current page in a span helps differentiate it from the rest of the links to class it more clearly and improve ease of styling-->
+        <div class = 'navBar'>
+                <a href= "index.html" data-tooltip="Home Page">Home</a>
+                <a href= "PersonalStatementQ1.html" data-tooltip="Why do you want to study this course or subject?">Question 1</a>
+            <span class="currentPage"><a href= "PersonalStatementQ2.html" data-tooltip="How have your qualifications and studies helped you to prepare for this course or subject?">Question 2</a></span>
+                <a href= "PersonalStatementQ3.html" data-tooltip="What else have you done to prepare outside of education, and why are these experiences useful?">Question 3</a>
+                <a href= "PersonalStatementGallery.html" data-tooltip="Photo Gallery">Photo Gallery</a>
+                <a href= "PersonalStatementWebsiteProcess.html" data-tooltip="Why make a personal statement website?">Website Creation Process</a>
+        </div>
+    </header>
+
+    <main>
+        <!--Need to remove this div tag and apply the corresponding styles in the CSS stylesheet to main tag instead-->
+        <div class="content">
+            <!-- UPDATE CONTENTS WHEN PERSONAL STATEMENT COMPLETED-->
+            <h1>How have your qualifications and studies helped you to prepare for this course or subject?</h1>
+            <p>Studying Graphic Communications has allowed me to build creativity, both in visual design and in developing unique solutions to problems. It has given me the opportunity to communicate ideas, think outside of the box, and demonstrate adaptability.
+            <p>These opportunities have also been explored through Mathematics, which tests my logical and abstract thinking and resilience. Through this subject I find satisfaction in independently working through challenging questions and finding links between topics within this subject and in others. Maths was a fundamental asset when studying the equation behind the PageRank Algorithm, for example, as it gave me the skills required to understand long equations which might otherwise appear overwhelming at first.</p>
+            <p>Computer Science A Level has given me insight into the logical theory, software and hardware elements of this subject. Through taught content and coursework, I have been able to gather a useful foundation of knowledge that will ease transition into higher education. The coursework has let me begin to develop high-quality software to solve a problem, making use of industry procedures and expanding my subject skills. For my project I chose to create an airport runway simulation; this allows users to monitor fictional airport throughput over time, and will be written in Python. Despite not having yet finished the project, I already feel more confident in my ability to follow a software development life cycle, evaluate the requirements of a computer-based task using stakeholder input, and apply that human interaction to the technical component of work. This has tested and will continue to test my time management and independent study abilities, among other crucial skills which have developed as a result. My dedication to all aspects of this subject has been marked by receiving my school’s senior award for Computer Science. However, despite this course providing me with necessary knowledge, the subject matter taught at this level is insufficient to appease my interest. I have already begun to remedy this through super curricular exploration which has widened the scope of my comprehension of Computer Science.</p>
+            <p>In my desire to build upon the core A Level curriculum, I chose the topic of gamification, a concept often covered in Human-Computer Interaction studies, for an EPQ. Over time, the title of my dissertation evolved to “Does the gamification of online educational tools improve the learning outcomes of GCSE students when used for content revision?”. My research led me to an increased interest in gamification – secondary information in the form of academic journals, e-books and videos explained how psychology engages with Computing, an aspect to the topic I had never considered, whilst my primary study was highly enjoyable, providing me with a new freedom to research in my own desired depth. Planning my investigation was time-consuming yet rewarding - it ran smoothly with year 10 Computing students as participants and the results I gathered led to the conclusion that my hypothesis was misinformed. I answered my question with clarity – the full answer explains the simple conclusion of “not necessarily”. This course prompted me to use new, unfamiliar technologies; I became better acquainted using software to handle the results of my study and keep to deadlines, and with using AI to organise data, among other activities. I had no previous experience with detailed research projects and believe this course has prepared me for the step up to higher education through developing key skills and those otherwise unexplored until university, like referencing, source evaluation, presentation, leadership and extensive independent learning.</p>
+            <p>Above my academic studies, I have dedicated time within school to helping others in my chosen subject of interest. As a CyberFirst Student Ambassador and school Computer Science Prefect I engage in activities which develop my leadership skills and confidence whilst improving proficiency in this subject. Having run mentoring sessions, planned an assembly, and represented the subject almost constantly to current and prospective students and parents, I have been able to outwardly reflect my passion in a way that benefits others.</p>
+            </div>
+    </main>
 
     <!--Contains the text for the background carousel-->
     <div class="movingContent">
@@ -40,18 +45,20 @@
             <span aria-hidden="True">Personal Statement | Computer Science | </span>
         </div>
     </div>
-</body>
 
-<footer>
-    <!--Creates input box, submit button, prompt etc in the footer of the page to give feedback on the website-->
-    <!--Including in a form tag means that the user pressing enter will have the same effect as clicking the button-->
-    <!--I use Formspree to handle the form submission because AI suggested that, for the simplicity of my project, using an external service like this one would be the most suitable way to handle the submission. After researching the service, I found it to suit my needs, and also notably found its security to be appropriate, so I am now using this to handle inputs here.-->
-    <form action="https://formspree.io/f/xgaelwnl" method="POST">
-        <!--required means that the user must have inputted something before form can be submitted-->
-        <label for="review">Like the website? Leave a review!</label>
-        <input id="review" type="text" name="review" required>
-        <button type="submit">Send</button>
-    </form>
-    <!--Adds my name to remind people that this is who they are sending feedback to and who created the website as well as providing opportunity for the GitHub link-->
-    <a href="https://github.com/dragonfire8kt/personal-statement-website" class="signOff">Kaitlin Addis</a>
-</footer>
+    <!--Since the footer is to be seen on the page, it must go inside the body tags-->
+    <footer>
+        <!--Creates input box, submit button, prompt etc in the footer of the page to give feedback on the website-->
+        <!--Including in a form tag means that the user pressing enter will have the same effect as clicking the button-->
+        <!--I use Formspree to handle the form submission because AI suggested that, for the simplicity of my project, using an external service like this one would be the most suitable way to handle the submission. After researching the service, I found it to suit my needs, and also notably found its security to be appropriate, so I am now using this to handle inputs here.-->
+        <form action="https://formspree.io/f/xgaelwnl" method="POST">
+            <!--required means that the user must have inputted something before form can be submitted-->
+            <label for="review">Like the website? Leave a review!</label>
+            <input id="review" type="text" name="review" required>
+            <button type="submit">Send</button>
+        </form>
+        <!--Adds my name to remind people that this is who they are sending feedback to and who created the website as well as providing opportunity for the GitHub link-->
+        <a href="https://github.com/dragonfire8kt/personal-statement-website" class="signOff">Kaitlin Addis</a>
+    </footer>
+
+</body>

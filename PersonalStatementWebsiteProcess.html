@@ -7,20 +7,22 @@
     <script type="text/javascript" src="PersonalStatement.js" defer></script>
 </head>
 
-<header> 
-    <!--The links that should be shown in the navigation bar-->
-    <!--Having current page in a span helps differentiate it from the rest of the links to class it more clearly and improve ease of styling-->
-    <div class = 'navBar'>
-            <a href= "index.html" data-tooltip="Home Page">Home</a>
-            <a href= "PersonalStatementQ1.html" data-tooltip="Why do you want to study this course or subject?">Question 1</a>
-            <a href= "PersonalStatementQ2.html" data-tooltip="How have your qualifications and studies helped you to prepare for this course or subject?">Question 2</a>
-            <a href= "PersonalStatementQ3.html" data-tooltip="What else have you done to prepare outside of education, and why are these experiences useful?">Question 3</a>
-            <a href= "PersonalStatementGallery.html" data-tooltip="Photo Gallery">Photo Gallery</a>
-            <span class="currentPage"><a href= "PersonalStatementWebsiteProcess.html" data-tooltip="Why make a personal statement website?">Website Creation Process</a></span>
-    </div>
-</header>
-
 <body>
+
+    <!--Since the header is to be seen on the page, it must go inside the body tags-->
+    <header> 
+        <!--The links that should be shown in the navigation bar-->
+        <!--Having current page in a span helps differentiate it from the rest of the links to class it more clearly and improve ease of styling-->
+        <div class = 'navBar'>
+                <a href= "index.html" data-tooltip="Home Page">Home</a>
+                <a href= "PersonalStatementQ1.html" data-tooltip="Why do you want to study this course or subject?">Question 1</a>
+                <a href= "PersonalStatementQ2.html" data-tooltip="How have your qualifications and studies helped you to prepare for this course or subject?">Question 2</a>
+                <a href= "PersonalStatementQ3.html" data-tooltip="What else have you done to prepare outside of education, and why are these experiences useful?">Question 3</a>
+                <a href= "PersonalStatementGallery.html" data-tooltip="Photo Gallery">Photo Gallery</a>
+                <span class="currentPage"><a href= "PersonalStatementWebsiteProcess.html" data-tooltip="Why make a personal statement website?">Website Creation Process</a></span>
+        </div>
+    </header>
+
     <!--Contains the text for the background carousel-->
     <div class="movingContent">
         <div class="homeContentBG">
@@ -31,66 +33,69 @@
         </div>
     </div>
 
-    <!--The text content of this page-->
-    <div class="content">
-        <h1>Why make a personal statement website?</h1>
-        <h2>The Idea</h2>
-        <p>I have attended many online lectures about writing my personal statement, received lots of advice, and read a huge amount of online support. I also received advice on open days, in school assemblies, and from people at my work experience. One concept which kept appearing was to <b>stand out positively</b>: hundreds or even thousands of other applicants are completing the same activities as me, and writing about them in a similar way, so I need to try to be different. <b>I would say that the fact that you are looking at a personal statement website right now is different, right?</b></p>
-        <p>I considered the possibility of creating a website for my personal statement well before I began planning and creating it. I had put it off for so long because, as mentioned, I want to stand out positively, and not seem like I am trying to evade the word count or anything similar. I wasn’t sure if having a personal statement website would be seen as too extreme. In the end, I took the risks that came with the website because the positives - in my eyes, at least - outweigh them.</p>
-        <h2>The Goal</h2>
-        <p><b>I want to make it clear that my website is an experiment rather than a polished outcome.</b> I did not create the website to show that I am the perfect developer, because I am not – I built it to demonstrate that I am excited by Computer Science and want to explore it further. It is not perfect - I can identify where maintainability could be improved, features could be added or developed, etc. Despite this lack of perfection, I am not concerned about these points, because everything I have learnt from developing this website can be applied to future projects, where I can then add increasingly complex features, improve maintainability, and streamline processes, all from the knowledge I have gathered now. I thoroughly enjoy programming, as I enjoy most aspects of Computer Science, and I can only do my best to make positive improvements to my work as my skills and knowledge progress.</p>
-        <p>In Computing A Level, we learn the absolute basics of web technologies. This website goes far above and beyond these skills, especially in CSS and JavaScript. The carousel of text you can see in the background of the pages took me over an hour to create, simply because I had not come across animation using CSS before, and it took research and experimentation to build something that worked as I wanted it to. In fact, this entire website has been created on <b>curiosity, experimentation and debugging</b>. Taking a leap with minimal human guidance has taught me so much about web development that I simply could not gather only in a guided A Level classroom.</p>
-        <h2>The Code</h2>
-        <p><b>Please, look at the code!</b> If you click on my name in the <b>footer</b>, you should be directed to the <b>GitHub</b> page where I have shared my code online. I know that GitHub is used by developers to collaborate, share successes and problems, manage code, and such, so by storing my code there I am happy to join this community. You can also view my code by right-clicking on the page and selecting <b>"View page source"</b>. Have a read of what I have created, including the comments, and explore for yourself.</p>
-        <h2>Key Development Points</h2>
-        <p>There is too much to say about the development of my website to possibly mention it all here, but here are some interesting/useful points:</p>
-        <ul>
-            <li><b>I began by just creating something rough with minimal functionality.</b> I started with the basic layout of the home page, then the password entry page, followed by the personal statement questions, the photo gallery, and finally this page.</li>
-            <li><b>I chose to develop the code in Visual Studio Code</b> - this is the IDE I used at my work experience placement, so I wanted to experiment with it further. I also know that VS Code is highly compatible with GitHub, which further influenced me to use this IDE.</li>
-            <li>I am unafraid to say that <b>I used AI</b> (Microsoft Copilot in combination with VS Code's own Copilot) to <b>assist</b> in solving problems and help with writing some sections of the code. There is some extra information on my use of AI later, so look at that if this interests you.</li>
-            <li>I ensured, where I could, that the code is <b>as maintainable as possible and open to scalability</b>. This includes through storing images in a dedicated file, using naming conventions (I prefer camelCase), adding comments as the code developed, and using a single external stylesheet across the whole website. There are still places where maintainability could be further improved, which I hope to build upon in future work.</li>
-        </ul>
-        <h2>My Use of AI</h2>
-        <p>A lot of my supercurricular activity has included mention of AI in some way: my use of AI, especially in this project, has been guided through the advice of the software development team on my Digital Services work experience, multiple online lectures and videos, and the book "AI Demystified" by Antonio Weiss. With it being such a talked-about developing technology, I wanted to make sure I considered how I could use AI in my website's development.</p>
-        <p>My current use of AI in development generally follows these steps:</p>
-        <ol>
-            <li>Come across something I am not sure how to do. This could be a new feature to create, some functionality I want to add, or an error I need to fix.</li>
-            <li>Take a moment to think about the problem: where have I solved an issue like this before? Can I reuse any other solutions? What have I learnt through previous stages of development that I can reuse here?</li>
-            <li>If unable to progress further from the previous step, I research the issue using a combination of online searches and AI queries. Research might be looking for a line of code I have not yet encountered which has the purpose I am looking for, seeing if any people online have had similar problems and have found solutions, or trying to find other routes I could take to solve the issue.</li>
-            <li>If experimentation from the above stage does not result in progress, I ensure that whichever AI I plan to use in assistance has all the <b>context</b> that it needs to be able to answer my problem as accurately as possible in as few prompts as possible. If using Microsoft Copilot rather than the in-built VS Code Copilot, I copy relevant code snippets into the AI prompt:  I always ensure to <b>remove sensitive information when interacting with external AIs</b>, like information about my personal statement’s content, for example.</li>
-            <li>I explain the problem I am trying to solve in detail to AI and describe exactly how I want it to help (identify places in the code which could be causing this error / suggest how JS, CSS or HTML (whichever I decide is best suited to the problem) could be used to create this function / etc).</li>
-            <li>I assess AI's responses. If it has written any code for me, <b>I ensure that I fully understand every line of it</b> - what exactly is it doing, why and how? I may provide <b>follow-up prompts</b> to give the model more information if it has struggled to respond effectively, ask what a section of code does or why it has been written in a particular way, or tell it to explain why any flawed code I wrote did not work.</li>
-            <li>If I think that AI has given me information which could solve my problem, I <b>experiment</b> with it. I often tailor AI's response to better fit to my needs, and I learn more about how the code works through removing parts of it, changing sections and manipulating commands. I may move back to further research online if I want even more information about something.</li>
-            <li>I add in <b>comments explaining the code</b> so that I know what it does next time, and so that I can <b>reuse what I have learnt</b> from these solutions in future problems.</li>
-        </ol>
-        <p>Overall, I aim to use AI <b>responsibly, without letting it do all of the work</b>. The heavy lifting for this project was done by myself, and I always had control of how AI interacted with my code.</p>
-        <p>Using AI to assist in some areas of the program <b>improved the efficiency of development and taught me much more than solely researching could have</b>. Here are some parts of my website where AI helped me to develop solutions to problems:</p>
-        <ul>
-            <li><b>The carousel of text.</b> AI helped me ensure that it was continuously moving without a break and aided in debugging any related issues.</li>
-            <li><b>Extracting images from an external code file.</b> I was unsure how to use JS to include the images in the GalleryPics file on the HTML page. AI helped me understand how to do this.</li>
-            <li><b>Enlarging and centralising images in the Gallery when clicked on.</b> I would not have discovered the concept of a modal window if AI had not introduced it, as it did not come up in any of the previous research I did to add this functionality.</li>
-            <li><b>Automating repetitive tasks.</b> AI helped to save time by completing activities like adding the same HTML elements to multiple pages or synchronising changes to filenames across the project.</li>
-            <li><b>Creating the automatic deployment of the website every time I commit changes to GitHub through VS Code.</b> Here I used AI to suggest how I could ensure that the page updated itself publicly every time I committed changes to GitHub, which would otherwise have been a very long process.</li>
-            <li><b>Adding security measures.</b> AI assisted in creating the keys which identify if a user has logged into the website during the current browser session, redirecting them to the password page if not and then allowing them to return to the desired page once authenticated.</li>
-        </ul>
-        <h2>In Conclusion</h2>
-        <p><b>This website has helped me more deeply explore concepts covered in school, during my work experience, and in supercurriculars such as lectures, videos and books. I have enjoyed this opportunity and hope that you have found this an interesting break from the generic personal statement.</b></p>
-        <p>Thank you for interacting with the site,</p>
-        <h4 class="signOff">Kaitlin Addis</h4>
-    </div>
+    <main>
+        <!--Need to remove this div tag and apply the corresponding styles in the CSS stylesheet to main tag instead-->
+        <div class="content">
+            <h1>Why make a personal statement website?</h1>
+            <h2>The Idea</h2>
+            <p>I have attended many online lectures about writing my personal statement, received lots of advice, and read a huge amount of online support. I also received advice on open days, in school assemblies, and from people at my work experience. One concept which kept appearing was to <b>stand out positively</b>: hundreds or even thousands of other applicants are completing the same activities as me, and writing about them in a similar way, so I need to try to be different. <b>I would say that the fact that you are looking at a personal statement website right now is different, right?</b></p>
+            <p>I considered the possibility of creating a website for my personal statement well before I began planning and creating it. I had put it off for so long because, as mentioned, I want to stand out positively, and not seem like I am trying to evade the word count or anything similar. I wasn’t sure if having a personal statement website would be seen as too extreme. In the end, I took the risks that came with the website because the positives - in my eyes, at least - outweigh them.</p>
+            <h2>The Goal</h2>
+            <p><b>I want to make it clear that my website is an experiment rather than a polished outcome.</b> I did not create the website to show that I am the perfect developer, because I am not – I built it to demonstrate that I am excited by Computer Science and want to explore it further. It is not perfect - I can identify where maintainability could be improved, features could be added or developed, etc. Despite this lack of perfection, I am not concerned about these points, because everything I have learnt from developing this website can be applied to future projects, where I can then add increasingly complex features, improve maintainability, and streamline processes, all from the knowledge I have gathered now. I thoroughly enjoy programming, as I enjoy most aspects of Computer Science, and I can only do my best to make positive improvements to my work as my skills and knowledge progress.</p>
+            <p>In Computing A Level, we learn the absolute basics of web technologies. This website goes far above and beyond these skills, especially in CSS and JavaScript. The carousel of text you can see in the background of the pages took me over an hour to create, simply because I had not come across animation using CSS before, and it took research and experimentation to build something that worked as I wanted it to. In fact, this entire website has been created on <b>curiosity, experimentation and debugging</b>. Taking a leap with minimal human guidance has taught me so much about web development that I simply could not gather only in a guided A Level classroom.</p>
+            <h2>The Code</h2>
+            <p><b>Please, look at the code!</b> If you click on my name in the <b>footer</b>, you should be directed to the <b>GitHub</b> page where I have shared my code online. I know that GitHub is used by developers to collaborate, share successes and problems, manage code, and such, so by storing my code there I am happy to join this community. You can also view my code by right-clicking on the page and selecting <b>"View page source"</b>. Have a read of what I have created, including the comments, and explore for yourself.</p>
+            <h2>Key Development Points</h2>
+            <p>There is too much to say about the development of my website to possibly mention it all here, but here are some interesting/useful points:</p>
+            <ul>
+                <li><b>I began by just creating something rough with minimal functionality.</b> I started with the basic layout of the home page, then the password entry page, followed by the personal statement questions, the photo gallery, and finally this page.</li>
+                <li><b>I chose to develop the code in Visual Studio Code</b> - this is the IDE I used at my work experience placement, so I wanted to experiment with it further. I also know that VS Code is highly compatible with GitHub, which further influenced me to use this IDE.</li>
+                <li>I am unafraid to say that <b>I used AI</b> (Microsoft Copilot in combination with VS Code's own Copilot) to <b>assist</b> in solving problems and help with writing some sections of the code. There is some extra information on my use of AI later, so look at that if this interests you.</li>
+                <li>I ensured, where I could, that the code is <b>as maintainable as possible and open to scalability</b>. This includes through storing images in a dedicated file, using naming conventions (I prefer camelCase), adding comments as the code developed, and using a single external stylesheet across the whole website. There are still places where maintainability could be further improved, which I hope to build upon in future work.</li>
+            </ul>
+            <h2>My Use of AI</h2>
+            <p>A lot of my supercurricular activity has included mention of AI in some way: my use of AI, especially in this project, has been guided through the advice of the software development team on my Digital Services work experience, multiple online lectures and videos, and the book "AI Demystified" by Antonio Weiss. With it being such a talked-about developing technology, I wanted to make sure I considered how I could use AI in my website's development.</p>
+            <p>My current use of AI in development generally follows these steps:</p>
+            <ol>
+                <li>Come across something I am not sure how to do. This could be a new feature to create, some functionality I want to add, or an error I need to fix.</li>
+                <li>Take a moment to think about the problem: where have I solved an issue like this before? Can I reuse any other solutions? What have I learnt through previous stages of development that I can reuse here?</li>
+                <li>If unable to progress further from the previous step, I research the issue using a combination of online searches and AI queries. Research might be looking for a line of code I have not yet encountered which has the purpose I am looking for, seeing if any people online have had similar problems and have found solutions, or trying to find other routes I could take to solve the issue.</li>
+                <li>If experimentation from the above stage does not result in progress, I ensure that whichever AI I plan to use in assistance has all the <b>context</b> that it needs to be able to answer my problem as accurately as possible in as few prompts as possible. If using Microsoft Copilot rather than the in-built VS Code Copilot, I copy relevant code snippets into the AI prompt:  I always ensure to <b>remove sensitive information when interacting with external AIs</b>, like information about my personal statement’s content, for example.</li>
+                <li>I explain the problem I am trying to solve in detail to AI and describe exactly how I want it to help (identify places in the code which could be causing this error / suggest how JS, CSS or HTML (whichever I decide is best suited to the problem) could be used to create this function / etc).</li>
+                <li>I assess AI's responses. If it has written any code for me, <b>I ensure that I fully understand every line of it</b> - what exactly is it doing, why and how? I may provide <b>follow-up prompts</b> to give the model more information if it has struggled to respond effectively, ask what a section of code does or why it has been written in a particular way, or tell it to explain why any flawed code I wrote did not work.</li>
+                <li>If I think that AI has given me information which could solve my problem, I <b>experiment</b> with it. I often tailor AI's response to better fit to my needs, and I learn more about how the code works through removing parts of it, changing sections and manipulating commands. I may move back to further research online if I want even more information about something.</li>
+                <li>I add in <b>comments explaining the code</b> so that I know what it does next time, and so that I can <b>reuse what I have learnt</b> from these solutions in future problems.</li>
+            </ol>
+            <p>Overall, I aim to use AI <b>responsibly, without letting it do all of the work</b>. The heavy lifting for this project was done by myself, and I always had control of how AI interacted with my code.</p>
+            <p>Using AI to assist in some areas of the program <b>improved the efficiency of development and taught me much more than solely researching could have</b>. Here are some parts of my website where AI helped me to develop solutions to problems:</p>
+            <ul>
+                <li><b>The carousel of text.</b> AI helped me ensure that it was continuously moving without a break and aided in debugging any related issues.</li>
+                <li><b>Extracting images from an external code file.</b> I was unsure how to use JS to include the images in the GalleryPics file on the HTML page. AI helped me understand how to do this.</li>
+                <li><b>Enlarging and centralising images in the Gallery when clicked on.</b> I would not have discovered the concept of a modal window if AI had not introduced it, as it did not come up in any of the previous research I did to add this functionality.</li>
+                <li><b>Automating repetitive tasks.</b> AI helped to save time by completing activities like adding the same HTML elements to multiple pages or synchronising changes to filenames across the project.</li>
+                <li><b>Creating the automatic deployment of the website every time I commit changes to GitHub through VS Code.</b> Here I used AI to suggest how I could ensure that the page updated itself publicly every time I committed changes to GitHub, which would otherwise have been a very long process.</li>
+                <li><b>Adding security measures.</b> AI assisted in creating the keys which identify if a user has logged into the website during the current browser session, redirecting them to the password page if not and then allowing them to return to the desired page once authenticated.</li>
+            </ul>
+            <h2>In Conclusion</h2>
+            <p><b>This website has helped me more deeply explore concepts covered in school, during my work experience, and in supercurriculars such as lectures, videos and books. I have enjoyed this opportunity and hope that you have found this an interesting break from the generic personal statement.</b></p>
+            <p>Thank you for interacting with the site,</p>
+            <h4 class="signOff">Kaitlin Addis</h4>
+            </div>
+    </main>
+
+    <!--Since the footer is to be seen on the page, it must go inside the body tags-->
+    <footer>
+        <!--Creates input box, submit button, prompt etc in the footer of the page to give feedback on the website-->
+        <!--Including in a form tag means that the user pressing enter will have the same effect as clicking the button-->
+        <!--I use Formspree to handle the form submission because AI suggested that, for the simplicity of my project, using an external service like this one would be the most suitable way to handle the submission. After researching the service, I found it to suit my needs, and also notably found its security to be appropriate, so I am now using this to handle inputs here.-->
+        <form action="https://formspree.io/f/xgaelwnl" method="POST">
+            <!--required means that the user must have inputted something before form can be submitted-->
+            <label for="review">Like the website? Leave a review!</label>
+            <input id="review" type="text" name="review" required>
+            <button type="submit">Send</button>
+        </form>
+        <!--Adds my name to remind people that this is who they are sending feedback to and who created the website as well as providing opportunity for the GitHub link-->
+        <a href="https://github.com/dragonfire8kt/personal-statement-website" class="signOff">Kaitlin Addis</a>
+    </footer>
+
 </body>
-
-
-<footer>
-    <!--Creates input box, submit button, prompt etc in the footer of the page to give feedback on the website-->
-    <!--Including in a form tag means that the user pressing enter will have the same effect as clicking the button-->
-    <!--I use Formspree to handle the form submission because AI suggested that, for the simplicity of my project, using an external service like this one would be the most suitable way to handle the submission. After researching the service, I found it to suit my needs, and also notably found its security to be appropriate, so I am now using this to handle inputs here.-->
-    <form action="https://formspree.io/f/xgaelwnl" method="POST">
-        <!--required means that the user must have inputted something before form can be submitted-->
-        <label for="review">Like the website? Leave a review!</label>
-        <input id="review" type="text" name="review" required>
-        <button type="submit">Send</button>
-    </form>
-    <!--Adds my name to remind people that this is who they are sending feedback to and who created the website as well as providing opportunity for the GitHub link-->
-    <a href="https://github.com/dragonfire8kt/personal-statement-website" class="signOff">Kaitlin Addis</a>
-</footer>
