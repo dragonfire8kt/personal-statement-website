@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="PersonalStatement.css">
-    <title>Kaitlin Addis | Personal Statement</title>
-    <script type="text/javascript" src="PersonalStatement.js" defer></script>
-</head>
-
-<body>
-
-    <!--Since the header is to be seen on the page, it must go inside the body tags-->
-    <header> 
-        <!--The links that should be shown in the navigation bar-->
-        <!--Having current page in a span helps differentiate it from the rest of the links to class it more clearly and improve ease of styling-->
-        <div class = 'navBar'>
-                <span class="currentPage"><a href= "index.html" data-tooltip="Home Page">Home</a></span>
-                <a href= "PersonalStatementQ1.html" data-tooltip="Why do you want to study this course or subject?">Question 1</a>
-                <a href= "PersonalStatementQ2.html" data-tooltip="How have your qualifications and studies helped you to prepare for this course or subject?">Question 2</a>
-                <a href= "PersonalStatementQ3.html" data-tooltip="What else have you done to prepare outside of education, and why are these experiences useful?">Question 3</a>
-                <a href= "PersonalStatementGallery.html" data-tooltip="Photo Gallery">Photo Gallery</a>
-                <a href= "PersonalStatementWebsiteProcess.html" data-tooltip="Why make a personal statement website?">Website Creation Process</a>
-        </div>
-    </header>
-
-    <!--Contains the text for the background carousel-->
-    <div class="movingContent">
-        <div class="homeContent">
-            <span>Personal Statement | Computer Science | </span>
-            <!--Ensures that there is no gap when the first line of the carousel text ends-->
-            <!--aria-hidden="True" prevents accessibility readers from reading the carousel text twice-->
-            <span aria-hidden="True">Personal Statement | Computer Science | </span>
-        </div>
-    </div>
-
-    <!--Since the footer is to be seen on the page, it must go inside the body tags-->
-    <footer>
-        <!--Creates input box, submit button, prompt etc in the footer of the page to give feedback on the website-->
-        <!--Including in a form tag means that the user pressing enter will have the same effect as clicking the button-->
-        <!--I use Formspree to handle the form submission because AI suggested that, for the simplicity of my project, using an external service like this one would be the most suitable way to handle the submission. After researching the service, I found it to suit my needs, and also notably found its security to be appropriate, so I am now using this to handle inputs here.-->
-        <form action="https://formspree.io/f/xgaelwnl" method="POST">
-            <!--required means that the user must have inputted something before form can be submitted-->
-            <label for="review">Like the website? Leave a review!</label>
-            <input id="review" type="text" name="review" required>
-            <button type="submit">Send</button>
-        </form>
-        <!--Adds my name to remind people that this is who they are sending feedback to and who created the website as well as providing opportunity for the GitHub link-->
-        <a href="https://github.com/dragonfire8kt/personal-statement-website" class="signOff">Kaitlin Addis</a>
-    </footer>
-
-</body>
+<html lang="en">
+	
+	<head>
+		<!--The viewport is the visible area of the web page on a device, the line below sets the width to the device width and the initial scale to 1.0-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="HTML, CSS, JavaScript, Personal Statement, Computer Science, University, Higher Education, Website, Kaitlin Addis">
+	    <meta name="description" content="A Personal Statement website, which includes one candidate's responses to the three questions of the Personal Statement along with accompanying images and an explanation of how and why the website was created.">
+		<meta name="author" content="Kaitlin Addis">
+		<link rel="stylesheet" href="PersonalStatement.css">
+	    <title>Kaitlin Addis | Personal Statement</title>
+	    <script type="text/javascript" src="PersonalStatement.js" defer></script>
+	</head>
+	
+	<body>
+	
+	    <!--Since the header is to be seen on the page, it must go inside the body tags-->
+		<header>
+			<nav aria-label="Main navigation">
+				<ul>
+					<li class="currentPage"><a href="index.html" data-tooltip="Home Page">Home</a></li>
+					<li><a href="PersonalStatementQ1.html" data-tooltip="Why do you want to study this course or subject?">Question 1</a></li>
+					<li><a href="PersonalStatementQ2.html" data-tooltip="How have your qualifications and studies helped you to prepare for this course or subject?">Question 2</a></li>
+					<li><a href="PersonalStatementQ3.html" data-tooltip="What else have you done to prepare outside of education, and why are these experiences useful?">Question 3</a></li>
+					<li><a href="PersonalStatementGallery.html" data-tooltip="Photo Gallery">Photo Gallery</a></li>
+					<li><a href="PersonalStatementWebsiteProcess.html" data-tooltip="Why make a personal statement website?">Website Creation Process</a></li>
+				</ul>
+			</nav>
+		</header>
+	
+	    <!--Contains the text for the background carousel-->
+	    <div class="movingContent">
+	        <div class="homeContent">
+	            <span>Personal Statement | Computer Science | </span>
+	            <!--Ensures that there is no gap when the first line of the carousel text ends-->
+	            <!--aria-hidden="True" prevents accessibility readers from reading the carousel text twice-->
+	            <span aria-hidden="True">Personal Statement | Computer Science | </span>
+	        </div>
+	    </div>
+	
+	    <!--Since the footer is to be seen on the page, it must go inside the body tags-->
+	    <footer>
+	        <!--Creates input box, submit button, prompt etc in the footer of the page to give feedback on the website-->
+	        <!--Including in a form tag means that the user pressing enter will have the same effect as clicking the button-->
+	        <!--I use Formspree to handle the form submission because AI suggested that, for the simplicity of my project, using an external service like this one would be the most suitable way to handle the submission. After researching the service, I found it to suit my needs, and also notably found its security to be appropriate, so I am now using this to handle inputs here.-->
+	        <form action="https://formspree.io/f/xgaelwnl" method="POST">
+	            <!--required means that the user must have inputted something before form can be submitted-->
+	            <label for="review">Like the website? Leave a review!</label>
+	            <input id="review" type="text" name="review" required>
+	            <button type="submit">Send</button>
+	        </form>
+	        <!--Adds my name to remind people that this is who they are sending feedback to and who created the website as well as providing opportunity for the GitHub link-->
+	        <a href="https://github.com/dragonfire8kt/personal-statement-website" class="signOff">Kaitlin Addis</a>
+	    </footer>
+	
+	</body>
+    
+</html>

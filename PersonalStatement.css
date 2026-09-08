@@ -12,17 +12,35 @@ body {
 }
 
 /*Creates the navigation bar*/
-.navBar {
+nav {
     background-color: #6119B8;
     color: #FFFFFF;
-    display: flex;
     width: 100%;
     height: 50px;
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 100;
+}
+
+/*Designs navigation bar*/
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     justify-content: space-around;
+    align-items: center;
+}
+
+/*Designs navigation bar links*/
+nav li {
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 /*Designs links*/
@@ -41,14 +59,14 @@ a:hover {
 
 /*Takes the tooltiptext (data-tooltip="") from each link in the navigation bar and creates a tooltip for each*/
 /*This means that when the user hovers over each link, it will show the full title of that page for if I have created a shorter title for the navigation bar*/
-/*.navBar is used so that this styling only applies to tooltips within the navigation bar*/
-.navBar a::before {
+/*nav is used so that this styling only applies to tooltips within the navigation bar*/
+nav a::before {
     /*This line means that the tooltip is not shown if the user is not hovering over the link*/
     opacity: 0;
 }
 
 /*Makes the tooltip visible when hovering over the link*/
-.navBar a:hover::before {
+nav a:hover::before {
     content: attr(data-tooltip);
     position: absolute;
     background-color: #D9C0F6;
@@ -102,7 +120,7 @@ p {
 }
 
 /*Desribes how to position text on the page (allows the page to have a margin at the sides around all text, and text will not be hidden by the navigation bar at the top, whilst having reasonable space before the bottom to seem less cramped*/
-.content {
+main {
     margin-inline: 5%;
     margin-top: 3%;
     margin-bottom: 4%;
@@ -258,7 +276,8 @@ input {
     opacity: 0.7;
 }
 
-.content b {
+/*Makes bold text purple to match the colour scheme of the website*/
+b {
     color: #D9C0F6;
 }
 
@@ -267,17 +286,20 @@ input {
 /*@media (media query) applies CSS only when certain device/screen conditions are true*/
 /*Here it means that the following styles are only applied for screens with a width less than or equal to 600px*/
 @media (max-width: 600px) {
-    .navBar {
+    nav {
         position: fixed;
         /*The following two lines allow the height of the navigation bar to change if the text has to wrap around to fit on the screen, but ensures that it is at least 50px high*/
         height: auto;
         min-height: 50px;
-        flex-wrap: wrap;
-        align-content: center;
         z-index: 100;
     }
 
-    .navBar a {
+    nav ul {
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    nav a {
         /*Padding size is changed so that the padding is smaller to fit smaller screens*/
         padding: 10px 8px;
         /*Change font size to be slightly smaller to wraps more suitably*/
@@ -285,7 +307,7 @@ input {
     }
 
     /*Changes the tooltip to be fixed in position and not move with the link, so that it is always visible on the screen and does not get cut off, allows the tooltip to wrap if width is insufficient*/
-    .navBar a:hover::before {
+    nav a:hover::before {
         position: fixed;
         top: 55px;
         left: 8px;
@@ -301,7 +323,7 @@ input {
     /*Makes the margins around page content smaller to fit smaller screen sizes*/
     /*padding-top changes to be in px because we know the approximate maximum height of the navBar given its content (number of links) and giving as a % would base the top spacing off the width of the content, which may not be suitable*/
     /*padding-top's value would need to be changed if links are added or removed*/
-    .content {
+    main {
         margin: 0 4%;
         padding-top: 70px;
         margin-bottom: 4%;
