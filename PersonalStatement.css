@@ -217,7 +217,7 @@ input {
 
 /*Describes how to position the images in the gallery*/
 .gallery {
-    margin: -3% 5% 5%;
+    margin: 2% 5% 5%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -247,13 +247,18 @@ input {
 /*Its z-index is very high to ensure it is always at the top of the page (in front of everything else) - I am aware that this is not a very maintainable way to do this (using a really high value) and hope to improve this in future*/
 .modal {
     display: none;
+    /*Using rgba colour values for translucency*/
     background-color: rgba(0,0,0,0.3);
     position: fixed;
-    top: 0;
-    left: 0;
 
-    width: 100%;
-    height: 100%;
+    /*inset positions an element relative to its container, so in this case it positions the modal relative to the page, and 0 means that it is positioned at the top left corner of the page extending to the bottom right corner of the page*/
+    /*This is a shorthand for top: 0; right: 0; bottom: 0; left: 0;*/
+    /*It also avoids needing to use width: 100%; height: 100%; which would not work if the page content is taller than the screen*/
+    inset: 0;
+    /*box-sizing: border-box ensures that padding is included in the set size of the modal*/
+    box-sizing: border-box;
+    padding: 5vh 5vw;
+    overflow: auto;
 
     z-index: 1000;
 
@@ -261,13 +266,37 @@ input {
     align-items: center;
 }
 
-/*The image to be enlarged and centralised using the modal in the gallery has a different drop shadow*/
-/*This code is where it is enlarged - it is set to a maximum of 80% of the page's height and width, so the user has plenty of room to click around it whilst seeing a lot more information than in the smaller view*/
+/*The image to be enlarged and centralised using the modal in the gallery has a different drop shadow to other images*/
 .modalContent {
-    max-width: 80%;
-    max-height: 80%;
+    /*The modal content (image and description) is displayed as a flexbox so that it can be centralised and so that the description is underneath the image*/
+    display: block;
+    /*These two lines means that the image will not be stretched to fit the modal, but will instead be shown at its original size unless it is too large for the screen, in which case it will be scaled down to fit*/
+    max-width: 100%;
+    max-height: 80vh;
     border-radius: 7%;
     filter: drop-shadow(#6119B8 7px 10px 5px)
+}
+
+/*Groups the enlarged image and its description so they stay together in the modal*/
+.modalPanel {
+    /*The width is set by JavaScript to match the displayed image width; this avoids issues with the text description being much wider than the image and causing issues with the user being able to click around the image to exit the enlarged view*/
+    max-width: 90vw;
+    max-height: 90vh;
+    /*box-sizing: border-box;
+    padding: 20px;*/
+    border-radius: 7px;
+    text-align: center;
+}
+
+/*Displays the description stored with the selected image*/
+#modalDescription {
+    /*Width is set to be the same as the image width and modalPanel width*/
+    width: 100%;
+    box-sizing: border-box;
+    margin: 15px 0 0;
+    color: #FFFFFF;
+    background-color: #1E003B;
+    font-size: 20px;
 }
 
 /*Currently selected page has a darker link in the navigation bar*/
@@ -363,6 +392,17 @@ b {
         /*All images are centered with a gap between them*/
         justify-content: center;
         gap: 10px;
+    }
+
+    /*Changes the size of the modal panel to be smaller on smaller screens so that it fits better*/
+    .modalPanel {
+        max-width: 90%;
+        padding: 12px;
+    }
+
+    .modalContent {
+        max-width: 100%;
+        max-height: 70vh;
     }
 
     /*Changes the size of the images based on screen size*/
