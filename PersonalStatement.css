@@ -72,7 +72,8 @@ nav a:hover::before {
     background-color: #D9C0F6;
     color: #000;
     opacity: 100;
-    top: 55px;
+    /*var means that the distance of the tooltip text from the top of each page is set to be the same as the height of the nav bar. This positions the tooltip text directly below the nav bar so spacing is organised and neat. 55px is added at the end as a fallback if there are issues with the JS measurement option*/
+    top: var(--navigation-height, 55px);
     left: 50%;
     transform: translateX(-50%);
     border-radius: 4px;
@@ -124,6 +125,16 @@ main {
     margin-inline: 5%;
     margin-top: 3%;
     margin-bottom: 4%;
+}
+
+/*Prevents the user scrolling beneath the footer*/
+.homePage {
+    overflow: hidden;
+}
+
+/*This class could be removed for the current state of the website, but having this class makes it clear how the footer and home page content should be presented if other CSS changes in future*/
+.homeMain {
+    flex: 1;
 }
 
 /*Creating page footer*/
@@ -338,7 +349,8 @@ b {
     /*Changes the tooltip to be fixed in position and not move with the link, so that it is always visible on the screen and does not get cut off, allows the tooltip to wrap if width is insufficient*/
     nav a:hover::before {
         position: fixed;
-        top: 55px;
+        /*var means that the distance of the tooltip text from the top of each page is set to be the same as the height of the nav bar. This positions the tooltip text directly below the nav bar so spacing is organised and neat. 60px is added at the end as a fallback if there are issues with the JS measurement option*/
+        top: var(--navigation-height, 60px);
         left: 8px;
         right: 8px;
         width: auto;

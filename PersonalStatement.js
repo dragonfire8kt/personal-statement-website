@@ -1,3 +1,23 @@
+//CODE BELOW ORGANISES THE LAYOUT OF TOOLTIP TEXT BENEATH THE NAVIGATION BAR
+
+//"nav" comes from the navigation bar in the html files -- these are wrapped in <nav></nav> tags
+//This takes the navigation bar for each page and stores it in the constant called navigation
+const navigation = document.querySelector("nav");
+
+//The line directly below checks that the navigation bar exists before the code runs, preventing errors, especially on pages without the navigation bar
+if (navigation) {
+    //Sets the result of the following code to be stored in the constant called updateNavigationHeight
+    const updateNavigationHeight = () => {
+        //Sets the --navigation-height property (used in the shared external CSS file) to be the same as the height of the nav bar in pixels
+        navigation.style.setProperty("--navigation-height", `${navigation.offsetHeight}px`);
+    };
+
+    //Calls the above function (runs immediately once the page loads)
+    updateNavigationHeight();
+    //Watches for changes in the navigation size - if navigation size changes, the function is run again to keep the value updated
+    new ResizeObserver(updateNavigationHeight).observe(navigation);
+}
+
 //CODE BELOW CONTROLS PASSWORD PROTECTION OF THE WEBSITE
 
 //Creates two constants: one for the key that will be used to store whether the user has logged in or not, and one for the key that will be used to store the page they were on before being redirected to the password page.
