@@ -8,8 +8,8 @@ const navigation = document.querySelector("nav");
 if (navigation) {
     //Sets the result of the following code to be stored in the constant called updateNavigationHeight
     const updateNavigationHeight = () => {
-        //Sets the --navigation-height property (used in the shared external CSS file) to be the same as the height of the nav bar in pixels
-        navigation.style.setProperty("--navigation-height", `${navigation.offsetHeight}px`);
+        //Sets the --navigation-height property (used in the shared external CSS file) to be just larger than as the height of the nav bar in pixels
+        navigation.style.setProperty("--navigation-height", `${navigation.offsetHeight+4}px`);
     };
 
     //Calls the above function (runs immediately once the page loads)

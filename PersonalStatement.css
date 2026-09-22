@@ -66,21 +66,35 @@ nav a::before {
 }
 
 /*Makes the tooltip visible when hovering over the link*/
+/*I spent quite a while trying to make the tooltip text show directly beneath the link it corresponded to, wrapping if this positioning would cause it to overflow the edges of the viewport. However, I could not get this to work, so resorted to having all tooltips centered on the page. In future, I would like to come back and fix this issue so that I could have it work as desired*/
 nav a:hover::before {
+    /*Determines what text is in the tooltip*/
     content: attr(data-tooltip);
-    position: absolute;
+    position: fixed;
+
     background-color: #D9C0F6;
     color: #000;
     opacity: 100;
+
     /*var means that the distance of the tooltip text from the top of each page is set to be the same as the height of the nav bar. This positions the tooltip text directly below the nav bar so spacing is organised and neat. 55px is added at the end as a fallback if there are issues with the JS measurement option*/
     top: var(--navigation-height, 55px);
+    /*Positions all tooltips in the centre of the page*/
     left: 50%;
     transform: translateX(-50%);
+    /*The width of the element is only as wide as its text content*/
+    width: max-content;
+    /*Calculated max-width means that the tooltip will wrap if it would otherwise go beyond the viewport sizing*/
+    max-width: calc(100vw - 16px);
+
+    text-align: center;
     border-radius: 4px;
-    padding: 0.2em;
+    padding: 0.1em;
+    /*Ensures padding is included in the maximum width of the tooltips*/
+    box-sizing: border-box;
     filter: drop-shadow(#6119B8 4px 4px 2px);
-    white-space: nowrap;
-    /*I was having issues trying to make the tooltip text wrap around ONLY if it is cut off by the edge of the screen, whilst still allowing it to be centered under the link. I am hoping to come back to this in future and fix this issue fully, although it has been handled for mobile devices.*/
+    /*Allows tooltip text which is too long to fit the desired width to wrap at spaces*/
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 /*Styling titles*/
@@ -123,7 +137,7 @@ p {
 /*Desribes how to position text on the page (allows the page to have a margin at the sides around all text, and text will not be hidden by the navigation bar at the top, whilst having reasonable space before the bottom to seem less cramped*/
 main {
     margin-inline: 5%;
-    margin-top: 3%;
+    margin-top: 4%;
     margin-bottom: 4%;
 }
 
@@ -132,9 +146,11 @@ main {
     overflow: hidden;
 }
 
-/*This class could be removed for the current state of the website, but having this class makes it clear how the footer and home page content should be presented if other CSS changes in future*/
 .homeMain {
     flex: 1;
+    /*Stops the carousel from being cut off at the edges before reaching the sides of the page*/
+    /*(Does this by overriding the styling from the main tag)*/
+    margin-inline: 0;
 }
 
 /*Creating page footer*/
@@ -283,7 +299,7 @@ input {
     display: block;
     /*These two lines means that the image will not be stretched to fit the modal, but will instead be shown at its original size unless it is too large for the screen, in which case it will be scaled down to fit*/
     max-width: 100%;
-    max-height: 80vh;
+    max-height: 75vh;
     border-radius: 7%;
     filter: drop-shadow(#6119B8 7px 10px 5px)
 }
@@ -351,13 +367,13 @@ b {
         position: fixed;
         /*var means that the distance of the tooltip text from the top of each page is set to be the same as the height of the nav bar. This positions the tooltip text directly below the nav bar so spacing is organised and neat. 60px is added at the end as a fallback if there are issues with the JS measurement option*/
         top: var(--navigation-height, 60px);
-        left: 8px;
-        right: 8px;
-        width: auto;
-        transform: none;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+        max-width: calc(100vw - 16px);
+        
         white-space: normal;
-        overflow-wrap: normal;
-        word-break: normal;
+        overflow-wrap: anywhere;
         text-align: center;
     }
 
