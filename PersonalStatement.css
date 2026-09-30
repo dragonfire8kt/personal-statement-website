@@ -43,13 +43,19 @@ nav li {
     height: 100%;
 }
 
-/*Designs links*/
+/*Designs most links*/
 a {
     color: #FFFFFF;
     display: block;
     padding: 15px;
     text-decoration: none;
     position: relative;
+}
+
+/*Designs links within a paragraph so that they are inline*/
+p a {
+    display: inline;
+    padding: 0;
 }
 
 /*The links now darken when hovered over*/

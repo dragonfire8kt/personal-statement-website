@@ -19,13 +19,13 @@ if (navigation) {
 }
 
 //CODE BELOW CONTROLS PASSWORD PROTECTION OF THE WEBSITE
+//THIS PASSWORD IS NOT A TRUE SECURITY MEASURE! - I am aware that the password can be bypassed, but this feature has been included to demonstrate that I have considered the security of my project and am able to begin implementing features that will improve the protection of my work.
 
 //Creates two constants: one for the key that will be used to store whether the user has logged in or not, and one for the key that will be used to store the page they were on before being redirected to the password page.
 const loginKey = "personalStatementLoggedIn";
 const returnPageKey = "personalStatementReturnPage";
-//Hashing the password will help to keep it secure, avoiding having it written in plain text and readable to anyone through the code.
-//This will help to improve the security of the website.
-//It is to be noted that this is a very simple layer of security, used to demonstrate that I have considered this aspect of my website, and is not being used to properly secure confidential data.
+//Hashing the password will help to keep it secure, avoiding having it written in plain text and readable to anyone through the code. This will help to improve the security of the website.
+//It should be noted that this is a very simple layer of security, used to demonstrate that I have considered this aspect of my website, and is not being used to secure confidential data.
 const passwordHash = "38d0f423e4089ea4202f1c1ba576f033f05a88dab38c8d527e8699a2aad5e80a";
 
 //Function to determine if the user has logged in before they are able to access any page besides the password page.

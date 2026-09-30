@@ -7,24 +7,23 @@
 window.GalleryPics = [
     //This stores each gallery item like an object with a source and description
     {src:"images/LightBox.jpg", description:"The box containing the circuit, controls and Arduino microcontroller for my LED light strip, as shown connected to the light strip. I programmed the microcontroller using C++."},
-    {src:"images/PrefectBadge.jpg", description:"My Computer Science Prefect Badge."},
-    {src:"images/CyberFirstBadge.png", description:"I have two of these badges, one for being a CyberFirst Student Ambassador, and another for attending NCSC's CyberFirst Advanced Course."},
+    {src:"images/PrefectBadge.jpg", description:"My Computer Science Prefect badge."},
+    {src:"images/CyberFirstBadge.jpg", description:"I have two of these badges, one for being a CyberFirst Student Ambassador, and another for attending the NCSC's CyberFirst Advanced Course."},
     {src:"images/Rebuilding1.jpg", description:"A progress photo taken when I disassembled two PCs, selecting the best parts to then rebuild into one."},
     {src:"images/Rebuilding2.jpg", description:"A progress photo taken when I disassembled two PCs, selecting the best parts to then rebuild into one."},
     {src:"images/Rebuilding3.jpg", description:"A progress photo taken when I disassembled two PCs, selecting the best parts to then rebuild into one."},
-    {src:"images/Rebuilding4.jpg", description:"The final, rebuilt Computer from the rebuilding project."},
-    {src:"images/SeniorAward.jpg", description:"My Senior Award which was presented to me to commend my work within and dedication towards Computer Science, including my activities as a subject Prefect and CyberFirst Student Ambassador."},
+    {src:"images/Rebuilding4.jpg", description:"The finished computer from my rebuilding project."},
+    {src:"images/SeniorAward.jpg", description:"My Senior Award, which was presented to me to commend my work within and dedication towards Computer Science, including my activities as a subject Prefect and CyberFirst Student Ambassador."},
     {src:"images/EPQ1.jpg", description:"An image taken during my EPQ presentation."},
     {src:"images/EPQ2.jpg", description:"An image taken during my EPQ presentation."},
     {src:"images/EPQ3.jpg", description:"An image taken during my EPQ presentation."},
-    {src:"images/EPQFile.jpg", description:"A photo of my final EPQ hand-in file."},
-    {src:"images/MathsVid2.png", description:"A screenshot from 3Blue1Brown's “Compression is Intelligence” series."},
+    {src:"images/EPQFile.jpg", description:"A photo of my final EPQ file."},
+    {src:"images/MathsVid2.jpg", description:"A screenshot from 3Blue1Brown's “Compression is Intelligence” series."},
     {src:"images/AIDemystified.jpg", description:"A photo of my copy of AI Demystified by Antonio Weiss: whilst this book is not mentioned in my Personal Statement, it helped to inform my use of AI in the creation of this website."},
-    {src:"images/CyberFirstProgramme.jpg", description:"A screenshot from the CyberFirst programme."},
-    {src:"images/CFWorkbook.jpg", description:"The workbook of information I was given for NCSC's CyberFirst Advanced Course."},
-    {src:"images/CFCertificate.jpg", description:"The certificate I was presented with at the end of NCSC's CyberFirst Advanced Course. I also recieved an additional notepad and pen which only a few students within the course were given to acknowledge students with particular dedication to the course's activities."},
-    {src:"images/CFInsideStairs.jpg", description:"Friends I made during NCSC's CyberFirst Advanced Course."},
-    {src:"images/CFGroup.jpg", description:"The group of students and professors taking part in NCSC's CyberFirst Advanced Course at my chosen location (UWE Bristol)."}
+    {src:"images/CyberFirstProgramme.jpg", description:"A screenshot from the NCSC's CyberFirst Advanced Course programme."},
+    {src:"images/CFWorkbook.jpg", description:"The workbook of information I was given for the NCSC's CyberFirst Advanced Course."},
+    {src:"images/CFCertificate.jpg", description:"The certificate I was presented with at the end of the NCSC's CyberFirst Advanced Course. I also recieved an additional notepad and pen which only a few students within the course were given, to acknowledge students with particular dedication to the course's activities."},
+    {src:"images/CFGroup.jpg", description:"The group of students and professors taking part in the NCSC's CyberFirst Advanced Course at my chosen location (UWE Bristol)."}
 ];
 
 //.forEach() iterates through every item in the GalleryPics array
